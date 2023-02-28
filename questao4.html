@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade J.S.</title>
+
+    <style>
+        body{
+            background-color: #1E90FF;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        .box-nav{
+            background-color: rgb(255, 249, 197);
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            border-radius:  15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            width: 50%;
+            background-color: slategrey;
+            color:white;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-nav">
+    <h1>ATIVIDADE JAVA SCRIPT #4</h1>
+    <h2>Maria Clara Andrade de Lacerda</h2>
+    <h3>4TI</h3>
+    </div>
+    <div class="box">
+        <p>Questão 4 - Efetuar o cálculo do valor de uma prestação em atraso, utilizando a fórmula: prestação = valor + (valor*(taxa/100)*tempo).</p>
+        <input type="number" id="valor" placeholder="Digite o valor da parcela">
+        <br><br>
+        <input type="number" id="taxa" placeholder="Digite o valor da taxa">
+        <br><br>
+        <input type="number" id="tempo" placeholder="Digite o tempo de atraso">
+        <br><br>
+        <button onclick="calcularAtraso()">Enviar</button>
+    </div>
+</body>
+<script>
+    function calcularAtraso()
+    {
+        var v = document.querySelector('#valor').value;
+        var taxa = document.querySelector('#taxa').value;
+        var tempo = document.querySelector('#tempo').value;
+
+        var prestacao = v + (v*(taxa/100)*tempo);
+
+        console.log('Valor da prestação atrasada: ' +prestacao);
+    }
+</script>
+</html>
